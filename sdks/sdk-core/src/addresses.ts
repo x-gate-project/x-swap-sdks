@@ -49,6 +49,7 @@ export const V2_FACTORY_ADDRESSES: AddressMap = {
   [ChainId.CELO]: '0x79a530c8e2fA8748B7B40dd3629C0520c2cCf03f',
   [ChainId.BLAST]: '0x5C346464d33F90bABaf70dB6388507CC889C1070',
   [ChainId.JOC_TESTNET]: '0x43bFE3948b41B045261E5A697bbfad00d8328130',
+  [ChainId.JOC_MAINNET]: '0x936e3Dc5F46a0fE1BdE6dB255e97B88fB675fEC2',
 }
 /**
  * @deprecated use V2_ROUTER_ADDRESSES instead
@@ -65,6 +66,7 @@ export const V2_ROUTER_ADDRESSES: AddressMap = {
   [ChainId.POLYGON]: '0xedf6066a2b290c185783862c7f4776a2c8077ad1',
   [ChainId.BLAST]: '0xBB66Eb1c5e875933D44DAe661dbD80e5D9B03035',
   [ChainId.JOC_TESTNET]: '0x1b84c21f79430d14B8c83f65a4F79E77fce6804E',
+  [ChainId.JOC_MAINNET]: '0x08D6AF48277f6C69709959F3f0034b4deD7b29Fd',
 }
 
 // Networks that share most of the same addresses i.e. Mainnet, Goerli, Optimism, Arbitrum, Polygon
@@ -258,6 +260,16 @@ const JOC_TESTNET_ADDRESSES: ChainAddresses = {
   swapRouter02Address: '0x09814928595C957127C44f05B6AE7e27f032d288',
 }
 
+const JOC_MAINNET_ADDRESSES: ChainAddresses = {
+  v3CoreFactoryAddress: '0x470A5Cbc9a5C4cc158895727242C8898c981fD98',
+  multicallAddress: '0x2AB5cf968eb28702129a1ee1c29D3A32fE4a2095',
+  quoterAddress: '0x3d4121A86C6F473702BE05141f43F572C6474dE3',
+  v3MigratorAddress: '0x0062B02ECe40D0Eb3D1C2E4E28498A8722833FcD',
+  nonfungiblePositionManagerAddress: '0xfF231C3D9453A5fE8B910ae6061E25e8277d63F8',
+  tickLensAddress: '0x6B9E0B85D36722f555469B1d29249cB17e542D64',
+  swapRouter02Address: '0xAf363Ec08bE49a465Bd4276240d487b3AFc4aEbd',
+}
+
 export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses> = {
   [ChainId.MAINNET]: MAINNET_ADDRESSES,
   [ChainId.OPTIMISM]: OPTIMISM_ADDRESSES,
@@ -282,6 +294,7 @@ export const CHAIN_TO_ADDRESSES_MAP: Record<SupportedChainsType, ChainAddresses>
   [ChainId.BLAST]: BLAST_ADDRESSES,
   [ChainId.ZKSYNC]: ZKSYNC_ADDRESSES,
   [ChainId.JOC_TESTNET]: JOC_TESTNET_ADDRESSES,
+  [ChainId.JOC_MAINNET]: JOC_MAINNET_ADDRESSES,
 }
 
 /* V3 Contract Addresses */
@@ -313,7 +326,7 @@ export const MULTICALL_ADDRESSES: AddressMap = {
  * The oldest V0 governance address
  */
 export const GOVERNANCE_ALPHA_V0_ADDRESSES: AddressMap = constructSameAddressMap(
-  '0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F'
+  '0x5e4be8Bc9637f0EAA1A755019e06A68ce081D58F',
 )
 /**
  * The older V1 governance address
